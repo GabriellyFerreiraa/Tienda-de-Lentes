@@ -1,3 +1,4 @@
+import cart from '../assets/cart.png'
 
 export const NavBar = () => (
     <header>
@@ -11,5 +12,6 @@ export const NavBar = () => (
                 </li>
             </ul>
         </nav>
+        <img src={cart} alt="Changuito" />
     </header>
 )
