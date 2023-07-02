@@ -2,7 +2,7 @@ import './App.css'
 import { NavBar } from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 
-const App1 = () => {
+const App = () => {
   return (
     <div>
       <h1>Mi aplicación</h1>
@@ -11,9 +11,9 @@ const App1 = () => {
   );
 };
 
-export default App1;
+export default App;
 
-function App() {
+function App1() {
   return (
   <>
     <NavBar />
