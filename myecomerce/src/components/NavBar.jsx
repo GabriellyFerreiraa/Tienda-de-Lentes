@@ -1,12 +1,13 @@
+
 export const NavBar = () => (
     <header>
         <nav>
-            <h6>Tienda de lentes</h6>
+            <h1>Tienda de lentes</h1>
             <ul>
                 <li>
-                    <a href="#">Home</a>
-                    <a href="#">Productos</a>
-                    <a href="#">Contacto</a>
+                    <a href=".../public/index.html">Home</a>
+                    <a href=".../public/producto.html">Productos</a>
+                    <a href=".../public/contacto.html">Contacto</a>
                 </li>
             </ul>
         </nav>
