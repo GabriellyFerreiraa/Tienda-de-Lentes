@@ -12,6 +12,6 @@ export const NavBar = () => (
                 </li>
             </ul>
         </nav>
-        <img src={cart} alt="Changuito" />
+        <img src={cart} alt="Changuito" /> 0
     </header>
 )
