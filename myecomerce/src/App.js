@@ -7,7 +7,6 @@ const App = () => {
     <>
     <NavBar />
     <div>
-      <h1>Mi aplicación</h1>
       <ItemListContainer greeting="¡Hola, bienvenido!" />
     </div>
     </>
