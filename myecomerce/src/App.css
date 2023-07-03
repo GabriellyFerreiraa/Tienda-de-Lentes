@@ -7,8 +7,6 @@
 
 :root {
   --mainColor: #29335c;
-  --mainColorLight: #5767aa;
-  --secondaryColor: #db2b39;
   --textColor: #eee;
 }
 
@@ -28,18 +26,10 @@ nav ul a {
   text-decoration: none;
 }
 
-nav ul a:hover {
-  color: var(--secondaryColor);
-}
-
 header div,
 nav {
   display: flex;
   align-items: center;
-}
-
-li {
-  display: flex;
 }
 
 #carrito {
