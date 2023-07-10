@@ -32,7 +32,14 @@ export const ItemListContainer = (props) => {
       <Container className='mt-4'>
         <h1>HOLA! {props.greeting}</h1>
         {products.length === 0 ? (
-           <div>Loading ... </div>
+          <div class="typing-indicator">
+          <div class="typing-circle"></div>
+          <div class="typing-circle"></div>
+          <div class="typing-circle"></div>
+          <div class="typing-shadow"></div>
+          <div class="typing-shadow"></div>
+          <div class="typing-shadow"></div>
+      </div>
            ):(
             <ItemList products={products} />
            )} 

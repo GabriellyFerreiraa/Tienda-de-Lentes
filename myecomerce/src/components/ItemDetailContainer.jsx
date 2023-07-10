@@ -23,7 +23,14 @@ export const ItemDetailContainer = (props) => {
       <Container className='mt-4'>
         <h1>Detalle</h1>
         {product.length === 0 ? (
-           <div>Loading ... </div>
+            <div class="typing-indicator">
+            <div class="typing-circle"></div>
+            <div class="typing-circle"></div>
+            <div class="typing-circle"></div>
+            <div class="typing-shadow"></div>
+            <div class="typing-shadow"></div>
+            <div class="typing-shadow"></div>
+            </div>
            ):(
             <ItemDetail lentes={product} />
            )} 
