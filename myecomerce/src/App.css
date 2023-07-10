@@ -20,14 +20,14 @@ header {
   color: var(--textColor);
 }
 
-nav ul a {
+Nav ul a {
   margin: 0 1rem;
   color: var(--textColor);
   text-decoration: none;
 }
 
 header div,
-nav {
+Nav {
   display: flex;
   align-items: center;
 }

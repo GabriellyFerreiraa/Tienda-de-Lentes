@@ -1,0 +1,23 @@
+[
+    {
+        "id" : 1,
+        "modelo": "Honey - HOLBOX",
+        "precio": 123,
+        "color": "Honey",
+        "img": "https://infinit.la/cdn/shop/products/HOLBOXhoney_g15.pol10ML.jpg?v=1683055735&width=800"
+    },
+    {
+        "id" : 2,
+        "modelo": "Negro Brillo - HOLBOX",
+        "precio": 123,
+        "color": "negro-brillo",
+        "img": "https://infinit.la/cdn/shop/products/HOLBOXbs_s10.pol11ML.jpg?v=1683055747&width=800"
+    },
+    {
+        "id" : 3,
+        "modelo": "Tonos Marron - HOLBOX",
+        "precio": 123,
+        "color": "tonos-marron",
+        "img": "https://infinit.la/cdn/shop/products/HOLBOXdemi.smk.grd11ML.jpg?v=1683055729&width=800"
+    }
+]

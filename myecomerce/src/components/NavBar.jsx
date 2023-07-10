@@ -1,8 +1,21 @@
-import cart from '../assets/cart.png'
+
+import { CartWidget } from './CartWidget';
+
+import data from '../data/products.json'
+import { NavLink } from 'react-router-dom';
+
+const categories = data.map(producto => producto.category)
+const unique = new Set(categories)
+
 
 export const NavBar = () => (
     <header>
-        <nav>
+        <nav className='mi-lentes'>
+            {[...unique].map(item => (
+                <NavLink className="nav-link" to={`/category/${item}`}>
+                    {item}
+                </NavLink>
+            ))}
             <h1>Tienda de lentes</h1>
             <ul>
                 <li>
@@ -12,6 +25,6 @@ export const NavBar = () => (
                 </li>
             </ul>
         </nav>
-        <img src={cart} alt="Changuito" id='carrito'/> 0
+        <CartWidget />
     </header>
 )
