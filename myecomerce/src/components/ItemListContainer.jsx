@@ -30,7 +30,7 @@ export const ItemListContainer = (props) => {
 
     return (
       <Container className='mt-4'>
-        <h1>HOLA! {props.greeting}</h1>
+        <h1> 🕶️ {props.greeting}</h1>
         {products.length === 0 ? (
           <div class="typing-indicator">
           <div class="typing-circle"></div>

@@ -10,14 +10,42 @@
         "id" : 2,
         "modelo": "Negro Brillo - HOLBOX",
         "precio": 123,
-        "color": "negro-brillo",
+        "color": "negro",
         "img": "https://infinit.la/cdn/shop/products/HOLBOXbs_s10.pol11ML.jpg?v=1683055747&width=800"
     },
     {
         "id" : 3,
         "modelo": "Tonos Marron - HOLBOX",
         "precio": 123,
-        "color": "tonos-marron",
+        "color": "marron",
         "img": "https://infinit.la/cdn/shop/products/HOLBOXdemi.smk.grd11ML.jpg?v=1683055729&width=800"
+    },
+    {
+        "id" : 4,
+        "modelo": "Caramelo - HOLBOX",
+        "precio": 123,
+        "color": "caramelo",
+        "img": "https://infinit.la/cdn/shop/products/HOLBOXcaramel.blue11ML.jpg?v=1683055719&width=800"
+    },
+    {
+        "id" : 5,
+        "modelo": "Translucido Gris (LENTE VERDE) - X03",
+        "precio": 123,
+        "color": "negro",
+        "img": "https://infinit.la/cdn/shop/products/x03lgreygung15.jpg?v=1681140336&width=800"
+    },
+    {
+        "id" : 5,
+        "modelo": "Carey (LENTE VERDE) Polarizado - MACCHINA",
+        "precio": 123,
+        "color": "marron",
+        "img": "https://infinit.la/cdn/shop/products/MACCHINAdemi.honeyg15POL.jpg?v=1675348917&width=800"
+    },
+    {
+        "id" : 5,
+        "modelo": "Translucido Marron - SHERLOCK",
+        "precio": 123,
+        "color": "marron",
+        "img": "https://infinit.la/cdn/shop/products/SHERLOCKBRNPTTS15POLARIZADO.jpg?v=1675360994&width=800"
     }
 ]

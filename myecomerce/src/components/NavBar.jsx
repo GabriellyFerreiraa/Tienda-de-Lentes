@@ -19,9 +19,9 @@ export const NavBar = () => (
             <h1>Tienda de lentes</h1>
             <ul>
                 <li>
-                    <a href=".../public/index.html">Home</a>
-                    <a href=".../public/producto.html">Productos</a>
-                    <a href=".../public/contacto.html">Contacto</a>
+                    <a href="#">Home</a>
+                    <a href="#">Productos</a>
+                    <a href="#">Contacto</a>
                 </li>
             </ul>
         </nav>
