@@ -4,7 +4,7 @@ export const ItemDetail = ({lentes}) => {
         <div>{lentes.id}</div>
         <div>{lentes.modelo}</div>
         <div>{lentes.precio}</div>
-        <div>{lentes.color}</div>
+        <div>{lentes.category}</div>
         <img src={lentes.img} alt={lentes.modelo}/>
     </>
     )
