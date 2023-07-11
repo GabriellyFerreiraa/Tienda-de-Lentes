@@ -36,6 +36,10 @@ Nav {
   width: 20px;
 }
 
+.float-start {
+  margin: 30px;
+}
+
 .typing-indicator {
   width: 60px;
   height: 30px;
