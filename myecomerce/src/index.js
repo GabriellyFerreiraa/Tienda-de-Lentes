@@ -4,6 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyABBHERNhAhH-sasaeesCS0kXm848vJ7Vc",
+  authDomain: "tiendalentes-a901b.firebaseapp.com",
+  projectId: "tiendalentes-a901b",
+  storageBucket: "tiendalentes-a901b.appspot.com",
+  messagingSenderId: "935025346885",
+  appId: "1:935025346885:web:0cce3e064eec479487d62c"
+};
+
+initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -1,22 +1,24 @@
+import { Link } from "react-router-dom"
 import Button from "react-bootstrap/Button"
 import Card from "react-bootstrap/Card"
-import { Link } from "react-router-dom"
 
-export const Item = ({lentes}) => {
-    return (
-    <Card 
-       style={{width: "18rem"}}
-       key={lentes.id}
-       className="float-start"
-    >
-        <Card.Img variant="top" src={lentes.img} />
-        <Card.Body>
-            <Card.Title>{lentes.modelo}</Card.Title>
-            <Card.Text>Precio: {lentes.precio}</Card.Text>
-            <Link to={`/item/${lentes.id}`}>
-                <Button varriant="primary">Ver detalle</Button>
-            </Link>
-        </Card.Body>
-       </Card>
-    )
-}
+export const Item = ({ item }) => (
+	<Card
+		style={{ width: "24rem" }}
+		key={item.id}
+		className="float-start"
+	>
+		<div style={{ overflow: "hidden", height: 250 }}>
+			<Card.Img variant="top" src={item.imageId} />
+		</div>
+		<Card.Body>
+			<Card.Title>{item.name}</Card.Title>
+			<Card.Text>Categoría: {item.categoryId}</Card.Text>
+			<Card.Text>{item.description}</Card.Text>
+			<Link to={`/item/${item.id}`}>
+				<Button variant="primary">Ver detalle</Button>
+			</Link>
+			<mark>Stock: {item.stock}</mark>
+		</Card.Body>
+	</Card>
+)

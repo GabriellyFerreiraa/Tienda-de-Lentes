@@ -1,39 +1,27 @@
-import { useState, useEffect } from 'react';
-import Container from 'react-bootstrap/Container'
+import { useState, useEffect } from "react"
+import { getFirestore, doc, getDoc } from "firebase/firestore"
+import Container from "react-bootstrap/Container"
+import { useParams } from "react-router-dom"
 
-import data from '../data/products.json'
-import {ItemDetail} from '../components/ItemDetail'
+import { ItemDetail } from "../ItemDetail/ItemDetail"
 
-export const ItemDetailContainer = (props) => {
-  const [product, SetProduct] = useState ([])
+export const ItemDetailContainer = () => {
+	const [product, setProduct] = useState({})
+	const { id } = useParams()
 
-  useEffect(() => {
-    const promesa = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(data)
-      }, 2000)
-    })
+	useEffect(() => {
+		const db = getFirestore()
 
-    promesa.then(result => {
-        SetProduct(result[2])
-    })
-  }, [])
+		const refDoc = doc(db, "items", id)
 
-    return (
-      <Container className='mt-4'>
-        <h1>Detalle</h1>
-        {product.length === 0 ? (
-            <div class="typing-indicator">
-            <div class="typing-circle"></div>
-            <div class="typing-circle"></div>
-            <div class="typing-circle"></div>
-            <div class="typing-shadow"></div>
-            <div class="typing-shadow"></div>
-            <div class="typing-shadow"></div>
-            </div>
-           ):(
-            <ItemDetail lentes={product} />
-           )} 
-      </Container>
-    );
-  };
+		getDoc(refDoc).then(snapshot =>
+			setProduct({ id: snapshot.id, ...snapshot.data() })
+		)
+	}, [id])
+
+	return (
+		<Container>
+			<ItemDetail product={product} />
+		</Container>
+	)
+}

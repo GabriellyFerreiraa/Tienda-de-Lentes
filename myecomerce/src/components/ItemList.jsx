@@ -1,4 +1,8 @@
-import { Item } from '../components/Item'
+import { Item } from "../Item/Item"
 
-export const ItemList = ({products}) => 
-    products.map(lentes => <Item key={lentes.id} lentes={lentes} />)
+export const ItemList = ({ items }) =>
+	!items.length ? (
+		<span>Loading</span>
+	) : (
+		items.map(item => <Item key={item.id} item={item} />)
+	)

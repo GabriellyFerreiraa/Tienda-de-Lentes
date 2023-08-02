@@ -1,32 +1,42 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import Container from 'react-bootstrap/Container'
+import { useState, useEffect } from "react"
+import { useParams } from "react-router-dom"
+import Container from "react-bootstrap/Container"
+import {
+	getFirestore,
+	collection,
+	getDocs,
+	query,
+	where,
+} from "firebase/firestore"
 
-import data from '../data/products.json'
-import {ItemList} from '../components/ItemList'
+import { ItemList } from "../ItemList/ItemList"
 
-export const ItemListContainer = (props) => {
-  const [products, SetProducts] = useState ([])
+export const ItemListContainer = ({ greeting }) => {
+	const [list, setList] = useState([])
+	const { id } = useParams()
 
-  const { id } = useParams ()
+	useEffect(() => {
+		const db = getFirestore()
 
-  useEffect(() => {
-    const promesa = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(data)
-      }, 2000)
-    })
+		const refCollection = id
+			? query(
+					collection(db, "items"),
+					where("categoryId", "==", id)
+			  )
+			: collection(db, "items")
 
-    promesa.then(result => {
-      if(id) {
-        SetProducts(
-          result.filter(product => product.category === id)
-          )
-      } else {
-        SetProducts(result)
-      }
-    })
-  }, [id])
+		getDocs(refCollection).then(snapshot => {
+			if (snapshot.size === 0) setList([])
+			else {
+				setList(
+					snapshot.docs.map(doc => ({
+						id: doc.id,
+						...doc.data(),
+					}))
+				)
+			}
+		})
+	}, [id])
 
     return (
       <Container className='mt-4'>
