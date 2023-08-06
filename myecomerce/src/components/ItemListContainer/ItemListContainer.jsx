@@ -38,21 +38,10 @@ export const ItemListContainer = ({ greeting }) => {
 		})
 	}, [id])
 
-    return (
-      <Container className='mt-4'>
-        <h1> 🕶️ {props.greeting}</h1>
-        {products.length === 0 ? (
-          <div class="typing-indicator">
-          <div class="typing-circle"></div>
-          <div class="typing-circle"></div>
-          <div class="typing-circle"></div>
-          <div class="typing-shadow"></div>
-          <div class="typing-shadow"></div>
-          <div class="typing-shadow"></div>
-      </div>
-           ):(
-            <ItemList products={products} />
-           )} 
-      </Container>
-    );
-  };
+	return (
+		<Container className="mt-4">
+			<h1>{greeting}</h1>
+			<ItemList items={list} />
+		</Container>
+	)
+}

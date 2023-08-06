@@ -3,7 +3,7 @@ import { getFirestore, doc, getDoc } from "firebase/firestore"
 import Container from "react-bootstrap/Container"
 import { useParams } from "react-router-dom"
 
-import { ItemDetail } from "../ItemDetail/ItemDetail"
+import { ItemDetail } from '../ItemDetail/ItemDetail';
 
 export const ItemDetailContainer = () => {
 	const [product, setProduct] = useState({})

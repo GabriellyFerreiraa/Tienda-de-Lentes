@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 
-import { CartWidget } from "../CartWidget/CartWidget"
+import { CartWidget } from '../CartWidget/CartWidget';
 
 export const NavBar = () => {
 	const [itemsMenu, setItemsMenu] = useState([])
