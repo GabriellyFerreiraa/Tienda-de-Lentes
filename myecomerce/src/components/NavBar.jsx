@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container"
 import Navbar from "react-bootstrap/Navbar"
 import Nav from "react-bootstrap/Nav"
 
-import { CartWidget } from '../CartWidget/CartWidget';
+import { CartWidget } from '../components/CartWidget';
 
 export const NavBar = () => {
 	const [itemsMenu, setItemsMenu] = useState([])
@@ -30,14 +30,14 @@ export const NavBar = () => {
 	return (
 		<Navbar bg="primary" variant="dark">
 			<Container>
-				<Navbar.Brand href="#home">Happy cats</Navbar.Brand>
+				<Navbar.Brand href="#home">Tienda de Lentes</Navbar.Brand>
 				<Nav className="me-auto">
-					<NavLink to="/">HOME</NavLink>
-					{itemsMenu?.map(item => (
-						<NavLink key={item} to={`/category/${item}`}>
-							{item.toUpperCase()}
-						</NavLink>
-					))}
+				<NavLink to="/">HOME</NavLink>
+{itemsMenu?.map(item => (
+  <NavLink key={item} to={`/category/${item}`}>
+    {item && item.toUpperCase()}
+  </NavLink>
+))}
 				</Nav>
 				<CartWidget />
 			</Container>

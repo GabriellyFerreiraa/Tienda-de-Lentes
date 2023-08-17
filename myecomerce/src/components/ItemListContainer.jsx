@@ -9,7 +9,7 @@ import {
 	where,
 } from "firebase/firestore"
 
-import { ItemList } from "../ItemList/ItemList"
+import { ItemList } from "./ItemList"
 
 export const ItemListContainer = ({ greeting }) => {
 	const [list, setList] = useState([])

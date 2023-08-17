@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import Table from "react-bootstrap/Table"
 
-import { CartContext } from '../../context/cartContext';
+import { CartContext } from '../context/cartContext';
 
 export const Cart = () => {
 	const [formValues, setFormValues] = useState({

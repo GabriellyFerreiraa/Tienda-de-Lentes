@@ -1,10 +1,10 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 
-import { CartContext } from "../../context/cartContext"
+import { CartContext } from "../context/cartContext"
 import Badge from "react-bootstrap/Badge"
 import Button from "react-bootstrap/Button"
-import cart from "../../assets/cart.png"
+import cart from "../assets/cart.png"
 
 const styles = {
 	span: {
