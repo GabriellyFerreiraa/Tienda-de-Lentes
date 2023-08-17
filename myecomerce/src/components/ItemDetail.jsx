@@ -10,13 +10,13 @@ export const ItemDetail = ({ product }) => {
 
 	return (
 		<div>
-			<h1>{product.title}</h1>
+			<h1>{product.nombre}</h1>
 			<img
-				src={product.imageId}
+				src={product.img}
 				height={300}
-				alt={product.title}
+				alt={product.nombre}
 			/>
-			<p>$ {product.price}</p>
+			<p>$ {product.precio}</p>
 			<ItemCount stock={product.stock} onAdd={onAdd} />
 		</div>
 	)

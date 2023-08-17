@@ -9,12 +9,12 @@ export const Item = ({ item }) => (
 		className="float-start"
 	>
 		<div style={{ overflow: "hidden", height: 250 }}>
-			<Card.Img variant="top" src={item.imageId} />
+			<Card.Img variant="top" src={item.img} />
 		</div>
 		<Card.Body>
-			<Card.Title>{item.name}</Card.Title>
-			<Card.Text>Categoría: {item.categoryId}</Card.Text>
-			<Card.Text>{item.description}</Card.Text>
+			<Card.Title>{item.nombre}</Card.Title>
+			<Card.Text>Categoría: {item.categoria}</Card.Text>
+			<Card.Text>{item.color}</Card.Text>
 			<Link to={`/item/${item.id}`}>
 				<Button variant="primary">Ver detalle</Button>
 			</Link>
