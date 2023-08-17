@@ -1,5 +1,5 @@
-import { useState, useContext } from "react"
-import { getFirestore, collection, addDoc } from "firebase/firestore"
+import { useState, useContext } from "react";
+import { getFirestore, collection, getDocs, doc } from "firebase/firestore";
 import Container from "react-bootstrap/Container"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
@@ -8,6 +8,7 @@ import Table from "react-bootstrap/Table"
 import { CartContext } from '../context/cartContext';
 
 export const Cart = () => {
+	
 	const [formValues, setFormValues] = useState({
 		name: "",
 		phone: "",
@@ -48,7 +49,7 @@ export const Cart = () => {
 				acumulador + valorActual.quantity * valorActual.price,
 			0
 		)
-
+    
 	return (
 		<Container className="mt-4">
 			<h1>Lista productos</h1>
@@ -69,16 +70,16 @@ export const Cart = () => {
 						<tbody>
 							{productosAgregados.map(producto => (
 								<tr key={producto.id}>
-									<td>{producto.title}</td>
+									<td>{producto.nombre}</td>
 									<td>
 										<img
 											height={60}
-											src={producto.imageId}
-											alt={producto.title}
+											src={producto.img}
+											alt={producto.nombre}
 										/>
 									</td>
-									<td>{producto.price}</td>
-									<td>{producto.quantity}</td>
+									<td>{producto.precio}</td>
+									<td>{producto.stock}</td>
 									<td>
 										<Button
 											onClick={() =>
