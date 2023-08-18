@@ -30,9 +30,10 @@ export const NavBar = () => {
 	return (
 		<Navbar bg="primary" variant="dark">
 			<Container>
-				<Navbar.Brand href="#home">Tienda de Lentes</Navbar.Brand>
+			<NavLink to="/" className="navbar-brand">  Tienda de Lentes </NavLink>
 				<Nav className="me-auto">
-				<NavLink to="/">HOME</NavLink>
+				<NavLink to="/" end> HOME</NavLink>
+
 {itemsMenu?.map(item => (
   <NavLink key={item} to={`/category/${item}`}>
     {item && item.toUpperCase()}
