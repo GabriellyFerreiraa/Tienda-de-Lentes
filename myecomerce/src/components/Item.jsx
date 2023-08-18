@@ -8,9 +8,9 @@ export const Item = ({ item }) => (
 		key={item.id}
 		className="float-start"
 	>
-		<div style={{ overflow: "hidden", height: 250 }}>
-			<Card.Img variant="top" src={item.img} />
-		</div>
+		<div style={{ overflow: "hidden", height: "100%" }}>
+    <Card.Img variant="top" src={item.img} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+</div>
 		<Card.Body>
 			<Card.Title>{item.nombre}</Card.Title>
 			<Card.Text>Categoría: {item.categoria}</Card.Text>

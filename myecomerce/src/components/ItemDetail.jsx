@@ -13,7 +13,7 @@ export const ItemDetail = ({ product }) => {
 			<h1>{product.nombre}</h1>
 			<img
 				src={product.img}
-				height={300}
+				height={500}
 				alt={product.nombre}
 			/>
 			<p>$ {product.precio}</p>
