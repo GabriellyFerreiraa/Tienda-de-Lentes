@@ -44,11 +44,11 @@ export const Cart = () => {
 	}
 
 	const total = () =>
-		productosAgregados.reduce(
-			(acumulador, valorActual) =>
-				acumulador + valorActual.quantity * valorActual.price,
-			0
-		)
+    productosAgregados.reduce(
+        (acumulador, valorActual) =>
+            acumulador + valorActual.quantity * valorActual.precio,
+        0
+    )
     
 	return (
 		<Container className="mt-4">
@@ -79,7 +79,7 @@ export const Cart = () => {
 										/>
 									</td>
 									<td>{producto.precio}</td>
-									<td>{producto.stock}</td>
+									<td>{producto.quantity}</td>
 									<td>
 										<Button
 											onClick={() =>
@@ -93,14 +93,15 @@ export const Cart = () => {
 							))}
 						</tbody>
 						<tfoot>
-							<tr>
-								<td>Total</td>
-								<td></td>
-								<td></td>
-								<td>{total()}</td>
-								<td></td>
-							</tr>
-						</tfoot>
+    <tr>
+        <td>Total</td>
+        <td></td>
+        <td>{total()}</td> {/* Muestra el total en la columna de "Precio" */}
+        <td></td>
+        <td></td>
+    </tr>
+</tfoot>
+
 					</Table>
 					<h2>Ingresar datos de usuario</h2>
 					<Form>
