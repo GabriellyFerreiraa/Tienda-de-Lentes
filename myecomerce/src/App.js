@@ -15,11 +15,11 @@ function App() {
 				<Routes>
 					<Route
 						path="/"
-						element={<ItemListContainer greeting="Productos" />}
+						element={<ItemListContainer className="text-white" greeting="Productos" />}
 					/>
 					<Route
 						path="/category/:id"
-						element={<ItemListContainer greeting="Productos" />}
+						element={<ItemListContainer className="text-white" greeting="Productos" />}
 					/>
 					<Route
 						path="/item/:id"
