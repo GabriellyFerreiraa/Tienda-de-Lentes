@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import Container from "react-bootstrap/Container";
 import {
   getFirestore,
   collection,
@@ -8,23 +6,25 @@ import {
   query,
   where,
 } from "firebase/firestore";
+import Container from "react-bootstrap/Container";
+import { useParams } from "react-router-dom";
 
 import { ItemList } from "./ItemList";
 
-export const ItemListContainer = ({ greeting, colorFilter }) => {
+export const ColorItemListContainer = ({ greeting, colorFilter }) => {
   const [list, setList] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     const db = getFirestore();
 
-    let refCollection = id
-      ? query(collection(db, "items"), where("categoryId", "==", id))
-      : collection(db, "items");
-
-    if (colorFilter) {
-      refCollection = query(refCollection, where("color", "==", colorFilter));
-    }
+    const refCollection = id
+      ? query(
+          collection(db, "items"),
+          where("categoryId", "==", id),
+          where("color", "==", colorFilter)
+        )
+      : collection(db, "items", where("color", "==", colorFilter));
 
     getDocs(refCollection).then((snapshot) => {
       if (snapshot.size === 0) setList([]);

@@ -42,3 +42,9 @@ body {
 .text-white {
   color: white;
 }
+
+.navbar-brand,
+.nav-link {
+  color: white !important;
+  margin: 0.5rem 0;
+}

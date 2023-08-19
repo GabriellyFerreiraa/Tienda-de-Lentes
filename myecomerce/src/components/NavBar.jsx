@@ -8,6 +8,7 @@ import "../App.css";
 
 import { CartWidget } from "../components/CartWidget";
 
+const availableColors = ["negro", "marron", "gris"];
 export const NavBar = () => {
   const [itemsMenu, setItemsMenu] = useState([]);
 
@@ -34,14 +35,19 @@ export const NavBar = () => {
           Tienda de Lentes{" "}
         </NavLink>
         <Nav className="me-auto">
-          <NavLink to="/" end className="nav-link home-link">
-            {" "}
+          <NavLink to="/" end className="nav-link">
             HOME
           </NavLink>
 
           {itemsMenu?.map((item) => (
             <NavLink key={item} to={`/category/${item}`} className="nav-link">
               {item && item.toUpperCase()}
+            </NavLink>
+          ))}
+
+          {availableColors.map((color) => (
+            <NavLink key={color} to={`/color/${color}`} className="nav-link">
+              {color.toUpperCase()}
             </NavLink>
           ))}
         </Nav>
