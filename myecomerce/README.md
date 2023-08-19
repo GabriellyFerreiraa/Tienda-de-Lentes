@@ -35,4 +35,4 @@ Las contribuciones son bienvenidas. Si deseas colaborar en el proyecto, asegúra
 
 
 ---
-Creado por Gabrielly Ferreira ([Enlace al perfil de GitHub](https://github.com/GabriellyFerreiraa/)https://github.com/GabriellyFerreiraa/)
+Creado por Gabrielly Ferreira ((https://github.com/GabriellyFerreiraa/))
