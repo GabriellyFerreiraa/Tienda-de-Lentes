@@ -2,7 +2,7 @@
 
 E-commerce store built with **React**, using Context API and a custom hook for cart management, React Router for navigation, and **Firebase Firestore** as a real cloud database.
 
-🔗 **Live demo:** [add the link here after deploying]
+🔗 **Live demo:** [https://gabriellyferreiraa.github.io/Tienda-de-Lentes/]
 
 ![Project screenshot](src/assets/screenshot.png)
 <!-- Replace with a real screenshot of the store's main screen -->
