@@ -13,12 +13,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyABBHERNhAhH-sasaeesCS0kXm848vJ7Vc",
-  authDomain: "tiendalentes-a901b.firebaseapp.com",
-  projectId: "tiendalentes-a901b",
-  storageBucket: "tiendalentes-a901b.appspot.com",
-  messagingSenderId: "935025346885",
-  appId: "1:935025346885:web:0cce3e064eec479487d62c"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
